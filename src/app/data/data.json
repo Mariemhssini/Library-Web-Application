@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "email" : "Mariem",
+        "password":"123652"
+    },
+    {
+        "id":2,
+        "email" : "malika",
+        "password":"4856"
+    },
+    {
+        "id":6,
+        "email" : "hajla",
+        "password":"123602552"
+    },
+    {
+        "id":7,
+        "email" : "Mariem",
+        "password":"123652"
+    },
+    {
+        "id":8,
+        "email" : "Mariem",
+        "password":"123652"
+    },
+    {
+        "id":5,
+        "email" : "Mariem",
+        "password":"48558845"
+    }
+]

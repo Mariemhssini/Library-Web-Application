@@ -1,0 +1,32 @@
+.ftco-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-image:url(../../assets/images/output-onlineimagetools.png) ; */
+    width: 100%;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-left: -1rem;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-image: radial-gradient(circle, #B77950 3%, #9C9FA6);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+form {
+    padding: 15px;
+    padding-left: 0px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+#12{
+    color:#B77950;
+    background-color: #B77950;
+}

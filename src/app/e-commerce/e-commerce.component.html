@@ -1,0 +1,153 @@
+<section class="ftco-section" style="background-color: rgba(171, 173, 167, 0.333) ;">
+    <div class="container">
+        <div class="row-8 justify-content-center">
+            <label for="demo-optional-label-group" style="text-align: center;justify-content: center;">Pour passer votre
+                commande , Veuillez remplir ce formulaire attentivement </label>
+            <mat-radio-group id="demo-optional-label-group" class="demo-radio-group" [(ngModel)]="optionalLabelText"
+                (ngModelChange)="updateOptionalLabel()">
+                <mat-radio-button class="demo-radio-button"
+                    *ngFor="let optionalLabelTextChoice of optionalLabelTextChoices" [value]="optionalLabelTextChoice">
+                    {{optionalLabelTextChoice}}
+                </mat-radio-button>
+            </mat-radio-group>
+            <!-------------------------info perso------------------------------->
+            <mat-stepper class="demo-stepper" #stepper style="margin-bottom:250px;padding-bottom: 0px;bottom: 200px;">
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <ng-template matStepLabel>Vos coordonnées</ng-template>
+                        <mat-card class="example-card" style="margin-bottom: 14px;">
+                            <img mat-card-md-image src="../../assets/images/book-4.png">
+                            <mat-card-content style="margin-left:20px;">
+                                {{longText}}
+                            </mat-card-content>
+                        </mat-card>
+                        <br>
+                        <mat-form-field class="demo-form-field" appearance="fill">
+                            <mat-label>Nom</mat-label>
+                            <input matInput placeholder="Nom,Prénom" formControlName="firstCtrl" required />
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="demo-form-field" appearance="fill">
+                            <mat-label>E-mail</mat-label>
+                            <input matInput placeholder="E-mail" formControlName="firstCtrl" required />
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Adresse</mat-label>
+                            <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" />
+                        </mat-form-field>
+                        <br>
+                        <div>
+                            <table class="example-full-width" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <mat-form-field class="example-full-width" appearance="fill">
+                                            <mat-label>Cité</mat-label>
+                                            <input matInput placeholder="Ex. San Francisco">
+                                        </mat-form-field>
+                                    </td>
+                                    <td>
+                                        <mat-form-field class="example-full-width" appearance="fill">
+                                            <mat-label>Pays</mat-label>
+                                            <input matInput placeholder="Ex. California">
+                                        </mat-form-field>
+                                    </td>
+                                    <td>
+                                        <mat-form-field class="example-full-width" appearance="fill">
+                                            <mat-label>Code Postale</mat-label>
+                                            <input matInput #postalCode maxlength="5" placeholder="Ex. 94105"
+                                                value="94043">
+                                            <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                                        </mat-form-field>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br>
+                        <div>
+                            <button mat-button class="btn btn-outline-secondary btn-lg" onclick="swal.fire('Done!')"
+                                style="margin-bottom:15px;margin-top:15px;" matStepperNext>Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <!-------------------------livre info---------------------->
+                <mat-step [stepControl]="firstFormGroup">
+                    <form [formGroup]="firstFormGroup">
+                        <ng-template matStepLabel>détails de votre commande </ng-template>
+                        <mat-card class="example-card" style="margin-bottom: 14px;">
+                            <!--<mat-card-title-group>-->
+                            <img mat-card-md-image src="../../assets/images/book-4.png">
+                            <mat-card-content style="margin-left:20px;">
+                                {{longText}}
+                            </mat-card-content>
+                        </mat-card>
+                        <br>
+                        <mat-form-field>
+                            <mat-label>Format</mat-label>
+                            <mat-select>
+                                <mat-option value="primary">Audio</mat-option>
+                                <mat-option value="accent">Vidéo</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                            <mat-label>Quantité</mat-label>
+                            <input matInput type="number" placeholder="Number of copies" min="1" max="50">
+                            <br>
+                            <span matSuffix>Copy</span>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field class="demo-form-field" appearance="fill">
+                            <mat-label>votre code promotion</mat-label>
+                            <input matInput placeholder="Coupon" />
+                        </mat-form-field>
+                        <br>
+                        <div>
+                            <button mat-button class="btn btn-outline-secondary  btn-lg" onclick="swal.fire('Done!')"
+                                style="margin-bottom:15px;margin-top:15px;" matStepperNext>Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <!------------------------------mode de paiment----------------------------------->
+                <mat-step [stepControl]="secondFormGroup" label="Fill out your Payment method" optional>
+                    <form [formGroup]="secondFormGroup">
+                        <mat-card class="example-card" style="margin-bottom: 14px;">
+                            <!--<mat-card-title-group>-->
+                            <img mat-card-md-image src="../../assets/images/book-4.png">
+                            <mat-card-content style="margin-left:20px;">
+                                {{longText}}
+                            </mat-card-content>
+                        </mat-card>
+                        <br>
+
+                        <div>
+                            <button mat-button matStepperPrevious>Back</button>
+                            <button mat-button matStepperNext>Next</button>
+                        </div>
+                    </form>
+                </mat-step>
+                <!---------------------------done-------------------->
+                <mat-step>
+                    <ng-template matStepLabel>Done</ng-template>
+                    <mat-card class="example-card" style="margin-bottom: 14px;">
+                        <!--<mat-card-title-group>-->
+                        <img mat-card-md-image src="../../assets/images/book-4.png">
+                        <mat-card-content style="margin-left:20px;">
+                            {{longText}}
+                        </mat-card-content>
+                    </mat-card>
+                    <br>
+                    <p>Votre commande est bien enregisté
+                        Merci pour votre confiance !
+                    </p>
+                    <div>
+                        <button mat-button matStepperPrevious>Back</button>
+                        <button mat-button (click)="stepper.reset()">Reset</button>
+                    </div>
+                </mat-step>
+            </mat-stepper>
+
+
+        </div>
+    </div>
+</section>

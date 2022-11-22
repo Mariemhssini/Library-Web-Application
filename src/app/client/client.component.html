@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Liste clients</title>
+</head>
+
+<body id="page-top">
+  <div id="wrapper">
+    <app-menu></app-menu>
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <app-navbar></app-navbar>
+        <div class="container-fluid">
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Gestion des clients </h1>
+          </div>
+          <div class="d-flex">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter
+              client</button>
+          </div>
+        </div>
+        <div class="col ml-2" style="margin-top:23px;">
+          <div class="card shadow mb-4">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+              <h6 class="m-0 font-weight-bold text-primary">Liste des clients</h6>
+            </div>
+            <div class="card-body">
+              <table class="table" style="margin-top: 5px;">
+                <thead>
+                  <tr>
+                    <th>id_user</th>
+                    <th>Nom </th>
+                    <th>Prénom </th>
+                    <th>e-mail </th>
+                    <th>password </th>
+                    <th>adress </th>
+                    <th>téléphone </th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let client of users">
+                  <tr>
+                    <td>{{client.firstname}}</td>
+                    <td>{{client.lastname}}</td>
+                    <td>{{client.phone}}</td>
+                    <td>{{client.email}}</td>
+                    <td>{{client.password}}</td>
+                    <td>
+                      <button class="btn btn-danger">Delete</button>
+                      <button class="btn btn-warning">Edit</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Ajouter Client</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Nom livre</label>
+                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Nom écrivain</label>
+                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">prix</label>
+                          <input type="number" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Resumé</label>
+                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Description</label>
+                          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Disponibilité</label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              OUI
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                              checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              NON
+                            </label>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Langue</label>
+                          <select class="form-select" aria-label="Default select example">
+                            <option value="1">Français</option>
+                            <option value="2">Anglais</option>
+                            <option value="3">Arabe</option>
+                          </select>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Catégorie</label>
+                          <select class="form-select" aria-label="Default select example">
+                            <option value="1">drama</option>
+                            <option value="2">romantique</option>
+                            <option value="3">developpement personelle</option>
+                          </select>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Type</label>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Ebook
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Audio
+                            </label>
+                          </div>
+                        </div>
+
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Ajouter</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+</body>
+
+</html>

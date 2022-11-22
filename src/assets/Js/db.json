@@ -1,0 +1,20 @@
+{
+    "UserInterface": [
+        {
+            "FirstName": "Mariem",
+            "LastName": "Mariem",
+            "adress": "12563",
+            "email": "mariem@hhhjajj",
+            "password": 123654,
+            "confpassword": 123654
+        },
+        {
+            "email": "Hadil",
+            "FirstName": "Mariem",
+            "LastName": "Mariem",
+            "adress": "12563",
+            "confpassword": 123654,
+            "password": 745288
+        }
+    ]
+}

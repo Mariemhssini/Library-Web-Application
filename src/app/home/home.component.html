@@ -1,0 +1,664 @@
+<app-header></app-header>
+
+<body>
+    <div class="section">
+        <div class="container">
+            <div id="hot-post" class="row hot-post">
+                <div class="section-title">
+                    <h2 class="title">les plus lus</h2>
+                </div>
+                <div class="col-md-8 hot-post-left">
+                    <div class="post post-thumb">
+                        <a class="post-img" href="#"><img src="../../assets/images/zin.jpg" alt=""></a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="#">Lifestyle</a>
+                            </div>
+                            <h3 class="post-title title-lg"><a href="#">Le bureau des affaires occultes</a></h3>
+                            <ul class="post-meta">
+                                <li><a href="#">John Doe</a></li>
+                                <li>20 April 2018</li>
+                            </ul>
+                            <button class="primary-button" [routerLink]="['/e-commerce']">Commander</button>
+                        </div>
+                    </div>
+                    <!-- /post -->
+                </div>
+                <div class="col-md-4 hot-post-right">
+                    <!-- post -->
+                    <div class="post post-thumb">
+                        <a class="post-img" href="blog-post.html"><img src="../../assets/images/girl-reading-book.webp"
+                                alt=""></a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html">Lifestyle</a>
+                            </div>
+                            <h3 class="post-title"><a href="blog-post.html">East-of-Eden</a></h3>
+                            <ul class="post-meta">
+                                <li><a href="author.html">John Doe</a></li>
+                                <li>20 April 2018</li>
+                            </ul>
+                            <button class="primary-button" [routerLink]="['/e-commerce']">Commander</button>
+                        </div>
+                    </div>
+                    <!-- /post -->
+
+                    <!-- post -->
+                    <div class="post post-thumb">
+                        <a class="post-img" href="blog-post.html"><img src="../../assets/images/blog-1.jpg" alt=""></a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html">Fashion</a>
+                                <a href="category.html">Lifestyle</a>
+                            </div>
+                            <h3 class="post-title"><a href="blog-post.html">Harry Potter.</a></h3>
+                            <ul class="post-meta">
+                                <li><a href="author.html">John Doe</a></li>
+                                <li>20 April 2018</li>
+                            </ul>
+                            <button class="primary-button" [routerLink]="['/e-commerce']">Commander</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SECTION -->
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title">
+                                <h2 class="title">Nouveaux Livres</h2>
+                            </div>
+                        </div>
+                        <div class="col-md-6" *ngFor="let livre of readData">
+                            <tbody>
+                                <div class="post">
+                                    <a class="post-img" [routerLink]="['/postbook']"><img
+                                            src="../../assets/images/dad.jpg" alt=""></a>
+                                    <div class="post-body">
+                                        <div class="post-category">
+                                            <a href="category.html">{{livre.Categorie}}</a>
+                                        </div>
+                                        <h3 class="post-title"><a [routerLink]="['/postbook']">
+                                                {{livre.nom_livre}}
+                                            </a></h3>
+                                        <ul class="post-meta">
+                                            <li><a href="author.html">
+                                                    <td>{{livre.nom_ecrivain}}</td>
+                                                </a></li>
+                                            <li>20 April 2018</li>
+                                            <td>{{livre.prix}}</td>
+                                            <td>{{livre.Description}}</td>
+                                            <td>{{livre.Disponibilite}}</td>
+                                            <td>{{livre.Langue}}</td>
+                                            <td>{{livre.type}}</td>
+                                            <td>{{livre.QTE}}</td>
+                                        </ul>
+                                        <button class="primary-button" [routerLink]="['/e-commerce']">Commander</button>
+
+                                    </div>
+                                </div>
+                            </tbody>
+                        </div>
+                        <!----livre-->
+                        <div class="col-md-6">
+                            <div class="post">
+                                <a class="post-img" [routerLink]="['/postbook']"><img
+                                        src="../../assets/images/East-of-Eden-203x300.jpg" alt=""></a>
+                                <div class="post-body">
+                                    <div class="post-category">
+                                        <a href="category.html">Technology</a>
+                                        <a href="category.html">Lifestyle</a>
+                                    </div>
+                                    <h3 class="post-title"><a href="blog-post.html">East of Eden</a></h3>
+                                    <ul class="post-meta">
+                                        <li><a href="author.html">John Doe</a></li>
+                                        <li>20 April 2018</li>
+                                    </ul>
+                                    <button class="primary-button">Commander</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /post -->
+                        <div class="clearfix visible-md visible-lg"></div>
+                        <!-- post -->
+                        <div class="col-md-6">
+                            <div class="post">
+                                <a class="post-img" [routerLink]="['/postbook']"><img
+                                        src="../../assets/images/téléchargement.jpeg" alt=""></a>
+                                <div class="post-body">
+                                    <div class="post-category">
+                                        <a href="category.html">Health</a>
+                                    </div>
+                                    <h3 class="post-title"><a href="blog-post.html">Wings Fire</a></h3>
+                                    <ul class="post-meta">
+                                        <li><a href="author.html">John Doe</a></li>
+                                        <li>20 April 2018</li>
+                                    </ul>
+                                    <button class="primary-button">Commander</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /post -->
+                        <!-- post -->
+                        <div class="col-md-6">
+                            <div class="post">
+                                <a class="post-img" [routerLink]="['/postbook']"><img
+                                        src="../../assets/images/book-1.png" alt=""></a>
+                                <div class="post-body">
+                                    <div class="post-category">
+                                        <a href="category.html">Health</a>
+                                        <a href="category.html">Lifestyle</a>
+                                    </div>
+                                    <h3 class="post-title"><a [routerLink]="['/postbook']">The art city</a></h3>
+                                    <ul class="post-meta">
+                                        <li><a href="author.html">John Doe</a></li>
+                                        <li>20 April 2018</li>
+                                    </ul>
+                                    <button class="primary-button">Commander</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /post -->
+                    </div>
+                    <!-- /row -->
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title">
+                                <h2 class="title">Lifestyle</h2>
+                            </div>
+                        </div>
+                        <!-- post -->
+                        <div class="col-md-4">
+                            <div class="post post-sm">
+                                <a class="post-img" [routerLink]="['/postbook']"><img
+                                        src="../../assets/images/book-5.png"></a>
+                                <div class="post-body">
+                                    <div class="post-category">
+                                        <a href="category.html">Lifestyle</a>
+                                    </div>
+                                    <h3 class="post-title title-sm"><a href="blog-post.html">Book 3 .</a></h3>
+                                    <ul class="post-meta">
+                                        <li><a href="author.html">John Doe</a></li>
+                                        <li>20 April 2018</li>
+                                    </ul>
+                                    <button class="primary-button">Commander</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /post -->
+                        <!-- post -->
+                        <div class="col-md-4">
+                            <div class="post post-sm">
+                                <a class="post-img" [routerLink]="['/postbook']"><img
+                                        src="../../assets/images/book-7.png" alt=""></a>
+                                <div class="post-body">
+                                    <div class="post-category">
+                                        <a href="category.html">Fashion</a>
+                                        <a href="category.html">Lifestyle</a>
+                                    </div>
+                                    <h3 class="post-title title-sm"><a href="blog-post.html">Postea senserit id eos,
+                                            vivendo periculis ei qui</a></h3>
+                                    <ul class="post-meta">
+                                        <li><a href="author.html">John Doe</a></li>
+                                        <li>20 April 2018</li>
+                                    </ul>
+                                    <button class="primary-button">Commander</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /post -->
+
+                        <!-- post -->
+                        <div class="col-md-4">
+                            <div class="post post-sm">
+                                <a class="post-img" [routerLink]="['/postbook']"><img
+                                        src="../../assets/images/book-4.png" alt=""></a>
+                                <div class="post-body">
+                                    <div class="post-category">
+                                        <a href="category.html">Technology</a>
+                                    </div>
+                                    <h3 class="post-title title-sm"><a href="blog-post.html">Sed ut perspiciatis, unde
+                                            omnis iste natus error sit</a></h3>
+                                    <ul class="post-meta">
+                                        <li><a href="author.html">John Doe</a></li>
+                                        <li>20 April 2018</li>
+                                    </ul>
+                                    <button class="primary-button">Commander</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /post -->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title">
+                                <h2 class="title">Fashion & Travel</h2>
+                            </div>
+                        </div>
+                        <!-- post -->
+                        <div class="col-md-4">
+                            <div class="post post-sm">
+                                <a class="post-img" [routerLink]="['/postbook']"><img
+                                        src="../../assets/images/book-3.png" alt=""></a>
+                                <div class="post-body">
+                                    <div class="post-category">
+                                        <a href="category.html">Travel</a>
+                                    </div>
+                                    <h3 class="post-title title-sm"><a href="blog-post.html">Ne bonorum praesent cum,
+                                            labitur persequeris definitionem quo cu?</a></h3>
+                                    <ul class="post-meta">
+                                        <li><a href="author.html">John Doe</a></li>
+                                        <li>20 April 2018</li>
+                                    </ul>
+                                    <button class="primary-button">Commander</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /post -->
+                        <!-- post -->
+                        <div class="col-md-4">
+                            <div class="post post-sm">
+                                <a class="post-img" href="blog-post.html"><img src="../../assets/images/book-8.png"
+                                        alt=""></a>
+                                <div class="post-body">
+                                    <div class="post-category">
+                                        <a href="category.html">Travel</a>
+                                        <a href="category.html">Lifestyle</a>
+                                    </div>
+                                    <h3 class="post-title title-sm"><a href="blog-post.html">Mel ut impetus suscipit
+                                            tincidunt. Cum id ullum laboramus persequeris.</a></h3>
+                                    <ul class="post-meta">
+                                        <li><a href="author.html">John Doe</a></li>
+                                        <li>20 April 2018</li>
+                                    </ul>
+                                    <button class="primary-button">Commander</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /post -->
+                    </div>
+                    <!-- /row -->
+
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title">
+                                <h2 class="title">Technology & Health</h2>
+                            </div>
+                        </div>
+                        <!-- post -->
+                        <div class="col-md-4">
+                            <div class="post post-sm">
+                                <a class="post-img" href="blog-post.html"><img src="../../assets/images/book-9.png"
+                                        alt=""></a>
+                                <div class="post-body">
+                                    <div class="post-category">
+                                        <a href="category.html">Travel</a>
+                                    </div>
+                                    <h3 class="post-title title-sm"><a href="blog-post.html">Mel ut impetus suscipit
+                                            tincidunt. Cum id ullum laboramus persequeris.</a></h3>
+                                    <ul class="post-meta">
+                                        <li><a href="author.html">John Doe</a></li>
+                                        <li>20 April 2018</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /post -->
+
+                        <!-- post -->
+                        <div class="col-md-4">
+                            <div class="post post-sm">
+                                <a class="post-img" href="blog-post.html"><img src="../../assets/images/book4.jpg"
+                                        alt=""></a>
+                                <div class="post-body">
+                                    <div class="post-category">
+                                        <a href="category.html">Lifestyle</a>
+                                    </div>
+                                    <h3 class="post-title title-sm"><a href="blog-post.html">Ne bonorum praesent cum,
+                                            labitur persequeris definitionem quo cu?</a></h3>
+                                    <ul class="post-meta">
+                                        <li><a href="author.html">John Doe</a></li>
+                                        <li>20 April 2018</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /post -->
+                    </div>
+                    <!-- /row -->
+                </div>
+                <div class="col-md-4">
+                    <!-- ad widget-->
+                    <div class="aside-widget text-center">
+                        <a href="#" style="display: inline-block;margin: auto;">
+                            <img class="img-responsive" src="./img/ad-3.jpg" alt="">
+                        </a>
+                    </div>
+                    <!-- /ad widget -->
+
+                    <!-- social widget -->
+                    <div class="aside-widget">
+                        <div class="section-title">
+                            <h2 class="title">Social Media</h2>
+                        </div>
+                        <div class="social-widget">
+                            <ul>
+                                <li>
+                                    <a href="#" class="social-facebook">
+                                        <i class="fa fa-facebook"></i>
+                                        <span>21.2K<br>Followers</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-twitter">
+                                        <i class="fa fa-twitter"></i>
+                                        <span>10.2K<br>Followers</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-google-plus">
+                                        <i class="fa fa-google-plus"></i>
+                                        <span>5K<br>Followers</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /social widget -->
+
+                    <!-- category widget -->
+                    <div class="aside-widget">
+                        <div class="section-title">
+                            <h2 class="title">Categories</h2>
+                        </div>
+                        <div class="category-widget">
+                            <ul>
+                                <li><a href="#">Lifestyle <span>451</span></a></li>
+                                <li><a href="#">Fashion <span>230</span></a></li>
+                                <li><a href="#">Technology <span>40</span></a></li>
+                                <li><a href="#">Travel <span>38</span></a></li>
+                                <li><a href="#">Health <span>24</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /category widget -->
+
+                    <!-- newsletter widget -->
+                    <div class="aside-widget">
+                        <div class="section-title">
+                            <h2 class="title">Newsletter</h2>
+                        </div>
+                        <div class="newsletter-widget">
+                            <form>
+                                <p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
+                                <input class="input" name="newsletter" placeholder="Enter Your Email">
+                                <button class="primary-button">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /newsletter widget -->
+
+                    <!-- post widget -->
+                    <div class="aside-widget">
+                        <div class="section-title">
+                            <h2 class="title">Popular Posts</h2>
+                        </div>
+                        <!-- post -->
+                        <div class="post post-widget">
+                            <a class="post-img" href="blog-post.html"><img src="../../assets/images/book3.jpg"
+                                    alt=""></a>
+                            <div class="post-body">
+                                <div class="post-category">
+                                    <a href="category.html">Lifestyle</a>
+                                </div>
+                                <h3 class="post-title"><a href="blog-post.html">Ne bonorum praesent cum, labitur
+                                        persequeris definitionem quo cu?</a></h3>
+                            </div>
+                        </div>
+                        <!-- /post -->
+
+                        <!-- post -->
+                        <div class="post post-widget">
+                            <a class="post-img" href="blog-post.html"><img src="../../assets/images/book6.jpg"
+                                    alt=""></a>
+                            <div class="post-body">
+                                <div class="post-category">
+                                    <a href="category.html">Technology</a>
+                                    <a href="category.html">Lifestyle</a>
+                                </div>
+                                <h3 class="post-title"><a href="blog-post.html">Mel ut impetus suscipit tincidunt. Cum
+                                        id ullum laboramus persequeris.</a></h3>
+                            </div>
+                        </div>
+                        <!-- /post -->
+                        <!-- post -->
+                        <div class="post post-widget">
+                            <a class="post-img" href="blog-post.html"><img src="../../assets/images/book-9.png"
+                                    alt=""></a>
+                            <div class="post-body">
+                                <div class="post-category">
+                                    <a href="category.html">Health</a>
+                                </div>
+                                <h3 class="post-title"><a href="blog-post.html">Postea senserit id eos, vivendo
+                                        periculis ei qui</a></h3>
+                            </div>
+                        </div>
+                        <!-- /post -->
+                        <!-- post -->
+                        <div class="post post-widget">
+                            <a class="post-img" href="blog-post.html"><img src="../../assets/images/images (2).jpeg"
+                                    alt=""></a>
+                            <div class="post-body">
+                                <div class="post-category">
+                                    <a href="category.html">Health</a>
+                                    <a href="category.html">Lifestyle</a>
+                                </div>
+                                <h3 class="post-title"><a href="blog-post.html">Sed ut perspiciatis, unde omnis iste
+                                        natus error sit</a></h3>
+                            </div>
+                        </div>
+                        <!-- /post -->
+                    </div>
+                    <!-- /post widget -->
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /SECTION -->
+
+    <!-- SECTION -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- ad -->
+                <div class="col-md-12 section-row text-center">
+                    <a href="#" style="display: inline-block;margin: auto;">
+                        <img class="img-responsive" src="../../assets/images/images (1).jpeg" alt="">
+                    </a>
+                </div>
+                <!-- /ad -->
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /SECTION -->
+
+    <!-- SECTION -->
+    <div class="section">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="section-title">
+                        <h2 class="title">Lifestyle</h2>
+                    </div>
+                    <!-- post -->
+                    <div class="post">
+                        <a class="post-img" href="blog-post.html"><img src="../../assets/images/blog-4.jpg" alt=""></a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html">Fashion</a>
+                                <a href="category.html">Lifestyle</a>
+                            </div>
+                            <h3 class="post-title"><a href="blog-post.html">Postea senserit id eos, vivendo periculis ei
+                                    qui</a></h3>
+                            <ul class="post-meta">
+                                <li><a href="author.html">John Doe</a></li>
+                                <li>20 April 2018</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /post -->
+                </div>
+                <div class="col-md-4">
+                    <div class="section-title">
+                        <h2 class="title">Fashion</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- /row -->
+
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- post -->
+                    <div class="post post-widget">
+                        <a class="post-img" [routerLink]="['/postbook']"><img src="../../assets/images/book-7.png"
+                                alt=""></a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html">Travel</a>
+                            </div>
+                            <h3 class="post-title"><a href="blog-post.html">Postea senserit id eos, vivendo periculis ei
+                                    qui</a></h3>
+                        </div>
+                    </div>
+                    <!-- /post -->
+                    <div class="post post-widget">
+                        <a class="post-img" [routerLink]="['/postbook']"><img src="../../assets/images/book-6.png"
+                                alt=""></a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html">Fashion</a>
+                                <a href="category.html">Lifestyle</a>
+                            </div>
+                            <h3 class="post-title"><a href="blog-post.html">Postea senserit id eos, vivendo periculis ei
+                                    qui</a></h3>
+                        </div>
+                    </div>
+                    <!-- /post -->
+                </div>
+                <div class="col-md-4">
+                    <!-- post -->
+                    <div class="post post-widget">
+                        <a class="post-img" [routerLink]="['/postbook']"><img src="../../assets/images/blog-4.jpg"
+                                alt=""></a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html">Travel</a>
+                            </div>
+                            <h3 class="post-title"><a href="blog-post.html">Mel ut impetus suscipit tincidunt. Cum id
+                                    ullum laboramus persequeris.</a></h3>
+                        </div>
+                    </div>
+
+                    <div class="post post-widget">
+                        <a class="post-img" [routerLink]="['/postbook']"><img src="../../assets/images/book-3.png"
+                                alt=""></a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html">Technology</a>
+                            </div>
+                            <h3 class="post-title"><a href="blog-post.html">Postea senserit id eos, vivendo periculis ei
+                                    qui</a></h3>
+                        </div>
+                    </div>
+                    <div class="post post-widget">
+                        <a class="post-img" [routerLink]="['/postbook']"><img src="../../assets/images/book-2.png"
+                                alt=""></a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html">Lifestyle</a>
+                            </div>
+                            <h3 class="post-title"><a href="blog-post.html">Sed ut perspiciatis, unde omnis iste natus
+                                    error sit</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="post post-row">
+                        <a class="post-img" href="blog-post.html"><img src="../../assets/images/book1.jpg" alt=""></a>
+                        <div class="post-body">
+                            <div class="post-category">
+                                <a href="category.html">Travel</a>
+                                <a href="category.html">Lifestyle</a>
+                            </div>
+                            <h3 class="post-title"><a [routerLink]="['/postbook']">Mel ut impetus suscipit tincidunt.
+                                    Cum id
+                                    ullum laboramus persequeris.</a></h3>
+                            <ul class="post-meta">
+                                <li><a href="author.html">John Doe</a></li>
+                                <li>20 April 2018</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+                        </div>
+                    </div>
+                    <!-- /post -->
+                    <div class="section-row loadmore text-center">
+                        <a href="#" class="primary-button">Load More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- galery widget -->
+                    <div class="aside-widget">
+                        <div class="section-title">
+                            <h2 class="title">Instagram</h2>
+                        </div>
+                        <div class="galery-widget">
+                            <ul>
+                                <li><a href="#"><img src="./img/galery-1.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="./img/galery-2.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="./img/galery-3.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="./img/galery-4.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="./img/galery-5.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="./img/galery-6.jpg" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="aside-widget text-center">
+                        <a href="#" style="display: inline-block;margin: auto;">
+                            <img class="img-responsive" src="./img/ad-1.jpg" alt="">
+                        </a>
+                    </div>
+                    <!-- /Ad widget -->
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /SECTION -->
+    <app-footer></app-footer>
+
+</body>
